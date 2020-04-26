@@ -1,0 +1,14 @@
+{
+    "name": "joao.marcos06/DesignPatterns",
+    "authors": [
+        {
+            "name": "João Marcos Tavares da Silva",
+            "email": "joao.marcos06@hotmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Jcode\\": "Jcode/php-classes/src"
+        }
+    }
+}
