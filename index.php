@@ -6,6 +6,7 @@ require_once("vendor/autoload.php");
 use Jcode\Singleton\LogSingleton;
 use Jcode\FactoryMethod\TeslaFactory;
 use Jcode\FactoryMethod\DodgeFactory;
+use Jcode\Prototype\BookPHPPrototype;
 
 
 
@@ -51,7 +52,27 @@ if($instance ===$newInstance){
     echo $e->getMessage();
 }*/
 
+/*PROTOTYPE*/
 
+$buyers = [
+    "João Marcos",
+    "João Augusto",
+    "João Lucas"
+];
+
+$bookPHP = new BookPHPPrototype();
+$bookPHP->setTitle("Design Patterns with PHP 7.2");
+
+$books = [];
+
+foreach($buyers as $buyer){
+    $bookBuyer = clone $bookPHP;
+    $bookBuyer->setTitleName($buyer);
+    
+    $books[] = $bookBuyer;
+}
+
+print_r($books);
 
 
 ?>
